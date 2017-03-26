@@ -79,6 +79,30 @@ namespace LifeMatch.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        [Required]
+        [StringLength(30, ErrorMessage = "First name must be at least 2 characters long and less than 30 characters long.", MinimumLength = 2)]
+        [DataType(DataType.Text)]
+        [Display(Name = "First name")]
+        public string FirstName { get; set; }
+
+        [Required]
+        [StringLength(30, ErrorMessage = "Last name must be at least 2 characters long and less than 30 characters long.", MinimumLength = 2)]
+        [DataType(DataType.Text)]
+        [Display(Name = "Last name")]
+        public string LastName { get; set; }
+
+        [Required]
+        [Display(Name = "Age")]
+        public int Age { get; set; }
+
+        [Required]
+        [Display(Name = "I am")]
+        public Enums.Gender Gender { get; set; }
+
+        [Required]
+        [Display(Name = "I'm interested in")]
+        public Enums.InterestedIn InterestedIn { get; set; }
     }
 
     public class ResetPasswordViewModel
