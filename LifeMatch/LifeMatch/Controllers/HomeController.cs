@@ -13,6 +13,11 @@ namespace LifeMatch.Controllers
             return View();
         }
 
+        public ActionResult SearchMatch()
+        {
+            return View();
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
